@@ -74,6 +74,22 @@ var sumBelow = function(n) {
 // 6. Get the integers in range (x, y).
 // Example:  range(2, 9);  // [3, 4, 5, 6, 7, 8]
 var range = function(x, y) {
+  //if x and y are equal
+  if(x === y) {
+    //return array
+    return [];
+  }
+  //if y is larger than x
+  if(x < y) {
+    //use array concatenation and recursive call to return range of two numbers
+    return [x + 1].concat(range(x + 1, y));
+  }
+  //if x is larger than y
+  if(x > y) {
+    //use array concatenation and recursive call to return range of two numbers
+    return [x - 1].concat(x - 1, y);
+  }
+  //handle negative numbers: 
 };
 
 // 7. Compute the exponent of a number.
@@ -131,6 +147,18 @@ var gcd = function(x, y) {
 // compareStr('', '') // true
 // compareStr('tomato', 'tomato') // true
 var compareStr = function(str1, str2) {
+  //if first and second string are empty
+  if(!str1.length && !str2.length) {
+    //true
+    return true;
+  }
+  //if first element of str1 and str2 are not equal
+  if(str1[0] !== str2[0]) {
+    //false
+    return false
+  }
+  //return recursive call
+  return compareStr(str1.slice(1), str2.slice(1));
 };
 
 // 16. Write a function that accepts a string and creates an array where each letter
