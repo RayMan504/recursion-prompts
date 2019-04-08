@@ -6,10 +6,17 @@
 // factorial(5);  // 120
 var factorial = function(n) {
   //base case: if n is 0
+  if(n === 0) {
     //return factorial
+    return 1;
+  }
   //if number is negative
-    //recursive call on inverse value
+  if( n < 0) {
+    //return null
+    return null
+  }
   //recurse call on n multiplied by n - 1
+  return n * factorial(n - 1);
 };
 
 // 2. Compute the sum of an array of integers.
