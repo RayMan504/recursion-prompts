@@ -23,8 +23,12 @@ var factorial = function(n) {
 // Example:  sum([1, 2, 3, 4, 5, 6]);  // 21
 var sum = function(array) {
   //if array length is 0
+  if(!array.length) {
     //return 0
+    return 0;
+  }
   //add first element in array with recursive call on sliced array
+  return array[0] + sum(array.slice(1));
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
