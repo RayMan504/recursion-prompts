@@ -38,6 +38,11 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+  //number zero is even
+  //number one is odd
+  //if number is negative
+    //return recursive call on inverse value
+  //recursive call on number decremented
 };
 
 // 5. Sum all integers below a given integer.
